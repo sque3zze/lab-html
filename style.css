@@ -1,0 +1,229 @@
+* {
+    padding: 0; /* убирает внутренние отступы у всех элементов */
+    margin: 0; /* убирает внешние отступы у всех элементов */
+    box-sizing: border-box; /* включает padding и border в общую ширину и высоту элемента */
+    font-family: Arial, Helvetica, sans-serif; /* задает основной шрифт страницы */
+    --mainColor: #087EA4; /* создает CSS-переменную с главным цветом сайта */
+}
+
+.wrapper {
+    width: 60%; /* задает ширину основного контейнера */
+    margin: auto; /* выравнивает контейнер по центру страницы */
+}
+
+.header {
+    width: 100%; /* растягивает шапку на всю ширину родителя */
+    height: 4rem; /* задает высоту шапки */
+    display: flex; /* включает flex-расположение дочерних элементов */
+    flex-direction: row; /* располагает элементы в строку */
+    justify-content: flex-start; /* прижимает элементы к началу по горизонтали */
+    align-items: center; /* выравнивает элементы по центру по вертикали */
+    gap: 2rem; /* задает расстояние между элементами */
+}
+
+.logo {
+    width: 32px; /* задает ширину логотипа */
+}
+
+nav a {
+    text-decoration: none; /* убирает подчеркивание у ссылок */
+    color: black; /* задает черный цвет текста ссылок */
+    text-transform: uppercase; /* делает текст ссылок заглавными буквами */
+    font-size: 16px; /* задает размер шрифта ссылок */
+    transition: all 0.3s ease; /* добавляет плавное изменение свойств */
+}
+
+nav a:hover {
+    color: var(--mainColor); /* меняет цвет ссылки при наведении */
+}
+
+.practice {
+    display: grid; /* включает grid-сетку для блока */
+    grid-template-columns: repeat(2, 1fr); /* создает две одинаковые колонки */
+    grid-gap: 1.5rem; /* задает расстояние между ячейками сетки */
+    grid-template-rows: minmax(auto, auto); /* задает автоматическую высоту строк */
+    margin-top: 2rem; /* добавляет внешний отступ сверху */
+}
+
+span {
+    font-family: 'Courier New', Courier, monospace; /* задает моноширинный шрифт для span */
+    font-weight: 700; /* делает текст жирным */
+    color: green; /* задает зеленый цвет текста */
+}
+
+.practice h1 {
+    grid-area: 1 / 1 / 2 / 3; /* размещает заголовок на всю ширину двух колонок */
+    margin: 0; /* убирает внешние отступы у заголовка */
+}
+
+.practice .block {
+    width: 100%; /* растягивает блок на всю ширину ячейки */
+    background: #f8f8f8; /* задает светлый фон блока */
+    border: 1px solid #dddddd; /* добавляет рамку вокруг блока */
+    border-radius: 10px; /* скругляет углы блока */
+    padding: 1rem; /* добавляет внутренний отступ */
+}
+
+.practice .block p {
+    margin-bottom: 1rem; /* добавляет отступ снизу у абзацев */
+}
+
+.practice .block h2 {
+    text-indent: 2rem; /* добавляет красную строку у заголовка */
+    color: var(--mainColor); /* задает цвет заголовка через переменную */
+    margin-bottom: 0.5rem; /* добавляет отступ снизу */
+}
+
+.practice .kindsOfTitles {
+    margin: 1rem 0; /* добавляет вертикальные внешние отступы */
+}
+
+.practice .kindsOfTitles h2,
+.practice .kindsOfTitles h1 {
+    text-indent: 0; /* убирает красную строку */
+    color: black; /* задает черный цвет текста */
+    margin: 0; /* убирает внешние отступы */
+}
+
+.practice .lists ul,
+.practice .lists ol {
+    padding: revert; /* возвращает стандартные отступы списков */
+}
+
+.practice .list {
+    margin: 1rem 0; /* добавляет вертикальные отступы списку */
+}
+
+.practice table {
+    table-layout: fixed; /* фиксирует ширину столбцов таблицы */
+    width: 100%; /* растягивает таблицу на всю ширину блока */
+    border-collapse: collapse; /* объединяет соседние рамки ячеек */
+    text-align: center; /* выравнивает текст по центру */
+}
+
+.practice table td {
+    text-align: left; /* выравнивает текст в ячейках по левому краю */
+}
+
+.practice table td,
+.practice table th {
+    border: 1px solid #b6b5b5; /* добавляет рамку ячейкам таблицы */
+    padding: 0.5rem; /* добавляет внутренний отступ в ячейках */
+}
+
+.practice table th {
+    background: #dddddd; /* задает серый фон заголовкам таблицы */
+}
+
+.practice .pic {
+    display: flex; /* включает flex-расположение */
+    justify-content: center; /* выравнивает картинку по центру */
+}
+
+.practice img {
+    max-width: 200px; /* ограничивает максимальную ширину изображения */
+}
+
+.practice form {
+    display: flex; /* включает flex-расположение элементов формы */
+    flex-direction: row; /* располагает элементы формы в строку */
+    flex-wrap: wrap; /* разрешает перенос элементов на новую строку */
+    align-items: center; /* выравнивает элементы по центру по вертикали */
+    gap: 0.5rem; /* задает расстояние между элементами формы */
+}
+
+.practice form input {
+    width: 49%; /* задает ширину поля ввода почти в половину строки */
+    padding: 0.5rem; /* добавляет внутренний отступ поля */
+    outline: none; /* убирает стандартную обводку при фокусе */
+    border: 1px solid var(--mainColor); /* добавляет рамку главным цветом */
+    border-radius: 5px; /* скругляет углы поля */
+    font-size: 14px; /* задает размер текста в поле */
+}
+
+.practice form input[type=color] {
+    padding: 0; /* убирает внутренний отступ у выбора цвета */
+    border: none; /* убирает рамку у выбора цвета */
+}
+
+.practice form input[type=radio] {
+    width: auto; /* возвращает стандартную ширину радиокнопке */
+}
+
+.practice button {
+    padding: 0.5rem 0.8rem; /* задает внутренние отступы кнопки */
+    border: 1px solid var(--mainColor); /* задает рамку кнопки главным цветом */
+    background: var(--mainColor); /* задает фон кнопки главным цветом */
+    border-radius: 50px; /* сильно скругляет углы кнопки */
+    color: white; /* задает белый цвет текста */
+    font-size: 14px; /* задает размер текста кнопки */
+    cursor: pointer; /* меняет курсор на указатель при наведении */
+    margin: 0.5rem 0; /* добавляет вертикальные внешние отступы */
+    transition: all 0.3s ease; /* добавляет плавное изменение свойств */
+}
+
+.practice button:hover {
+    background: #076483; /* меняет фон кнопки при наведении */
+    border: 1px solid #076483; /* меняет цвет рамки при наведении */
+}
+
+.practice button:active {
+    background: #0b8fbb; /* меняет фон кнопки при нажатии */
+    border: 1px solid #0b8fbb; /* меняет цвет рамки при нажатии */
+}
+
+.about {
+    width: 100%; /* растягивает секцию на всю ширину родителя */
+    display: flex; /* включает flex-расположение */
+    flex-direction: column; /* располагает элементы секции в колонку */
+    margin-top: 4rem; /* добавляет внешний отступ сверху */
+}
+
+.title {
+    text-transform: uppercase; /* делает текст заголовка заглавными буквами */
+    font-size: 60px; /* задает крупный размер заголовка */
+    font-weight: 900; /* делает заголовок очень жирным */
+    color: #087EA4; /* задает цвет заголовка */
+    margin: 1rem 0; /* добавляет вертикальные внешние отступы */
+}
+
+.title.reverse {
+    text-align: end; /* выравнивает заголовок по правому краю */
+}
+
+.info {
+    display: flex; /* включает flex-расположение */
+    flex-direction: row; /* располагает элементы в строку */
+    align-items: center; /* выравнивает элементы по центру по вертикали */
+    justify-content: center; /* выравнивает элементы по центру по горизонтали */
+    gap: 4rem; /* задает расстояние между текстом и изображением */
+}
+
+.info img {
+    --pic: 250px; /* создает переменную с размером изображения */
+    width: var(--pic); /* задает ширину изображения через переменную */
+    height: var(--pic); /* задает высоту изображения через переменную */
+    border-radius: calc(var(--pic) / 2); /* делает изображение круглым */
+    object-fit: cover; /* кадрирует изображение без искажения пропорций */
+}
+
+.infoAboutMe {
+    display: flex; /* включает flex-расположение */
+    flex-direction: column; /* располагает элементы в колонку */
+    justify-content: flex-start; /* прижимает элементы к началу */
+    gap: 1rem; /* задает расстояние между элементами */
+}
+
+.infoAboutMe p {
+    text-indent: 1rem; /* добавляет красную строку у абзацев */
+}
+
+.myname h3 {
+    text-transform: uppercase; /* делает имя заглавными буквами */
+    font-size: 28px; /* задает размер текста имени */
+}
+
+.myname p {
+    color: gray; /* задает серый цвет описания */
+    text-indent: 0; /* убирает красную строку */
+}

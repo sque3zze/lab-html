@@ -1,0 +1,203 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" type="text/css" href="style.css">
+</head>
+<body>
+    <div class="wrapper">
+        <div class="header">
+            <img src="./assets/черемша.jpg" alt="logo">
+            <nav>
+                <a href="#practice">Practice</a>
+                <a href="#about">About</a>
+                <a href="#skills">Skills</a>
+                <a href="#portfolio">Portfolio</a>
+                <a href="#contacts">Contacts</a>
+            </nav>
+        </div>
+
+        <div class="practice" id="practice">
+            <h1 class="title">Practice</h1>
+
+            <div class="block titles">
+    <h2>Заголовки</h2>
+
+    <div class="kindsOfTitles">
+        <h1>Заголовок первого уровня</h1>
+        <h2>Заголовок второго уровня</h2>
+    </div>
+</div>
+
+            <div class="block lists">
+    <h2>Списки</h2>
+    <ul class="list">
+        Маркированный список
+        <li>Пункт 1</li>
+        <li>
+            Список внутри списка
+            <ul>
+                <li>Подпункт 1</li>
+                <li>Подпункт 2</li>
+            </ul>
+        </li>
+        <li>Пункт 3</li>
+    </ul>
+
+    <ol class="list">
+        Нумерованный список
+        <li>Пункт 1</li>
+        <li>
+            Пункт 2
+            <ul>
+                <li>Подпункт 1</li>
+                <li>Подпункт 2</li>
+            </ul>
+        </li>
+        <li>
+            Пункт 3
+            <ol>
+                <li>Подпункт 1</li>
+                <li>Подпункт 2</li>
+            </ol>
+        </li>
+    </ol>
+</div>
+
+           <div class="block tables">
+    <h2>Таблицы</h2>
+    <table>
+        <tr>
+            <th>Студент</th>
+            <th>Группа</th>
+            <th>Предмет</th>
+        </tr>
+        <tr>
+            <td>Глебус Мячиков</td>
+            <td>ИКТС-31</td>
+            <td>Баскетбол</td>
+        </tr>
+        <tr>
+            <td>Сын Матраса</td>
+            <td>ИКТС-67</td>
+            <td>Учения по сну</td>
+        </tr>
+    </table>
+</div>
+            <div class="block pics">
+    <h2>Изображения</h2>
+    <p>
+     в HTML можно, а зачем?
+    </p>
+
+    <div class="pic">
+        <img src="./assets/qr.png" alt="вывод">
+    </div>
+</div>
+            <div class="block links">
+    <h2>Ссылки</h2>
+    <a href="https://soundcloud.com/" target="_blank">Ссылка на методичку</a>
+</div>
+            <div class="block forms">
+    <h2>Формы</h2>
+    <form action="">
+        <input type="text" name="text" placeholder="Любой текст">
+        <input type="number" placeholder="Только числа">
+        <input type="tel" name="phone" placeholder="Номер телефона">
+        <input type="email" name="email" placeholder="Почта">
+        <input type="password" name="password" placeholder="Пароль">
+        <input type="color" placeholder="Цвет">
+        <input type="range" placeholder="">
+        <input type="date" placeholder="">
+        <input type="datetime-local" placeholder="">
+        <input type="checkbox" placeholder="">
+
+        <div class="radioblock">
+            <div class="answers">
+                <input type="radio" name="radio" id="answer1">
+                <label for="answer1">Ответ 1</label>
+            </div>
+
+            <div class="answers">
+                <input type="radio" name="radio" id="answer2">
+                <label for="answer2">Ответ 2</label>
+            </div>
+        </div>
+    </form>
+
+    <button type="submit">Отправить</button>
+</div>
+
+        <div class="about" id="about">
+    <h1 class="title">Who is?</h1>
+
+    <div class="info">
+        <div class="infoAboutMe">
+            <div class="myname">
+                <h3>Dimitrii</h3>
+                <p> A few Dollars maker</p>
+            </div>
+
+            <p>
+            wanna tandem 4th gen woled monitor... 
+            </p>
+        </div>
+
+        <img src="./assets/me.jpg" alt="my photo" class="myphoto">
+    </div>
+</div>
+        <div class="skills" id="skills">
+    <h1 class="title">Skills</h1>
+    <ul>
+        <li>Стрессоустойчивость, коммуникабельность, клиентоориентированность;</li>
+        <li>Основы сетей: Модели OSI и TCP/IP, понимание топологии сетей, оптические технологии, работа с абонентскими устройствами;</li>
+        <li>П.О.: Компас-3D, начальные знания autoCAD, проектирование PON в частном секторе с помощью ВОЛС.Эксперт для выполнения учебных задач;</li>
+        <li>Английский — <b>B2</b> техническая переписка.</li>
+    </ul>
+</div>
+
+<div class="portfolio" id="portfolio">
+    <h1 class="title">Portfolio</h1>
+
+    <h2>Образование:</h2>
+    <ul>
+        <li>
+            Санкт-Петербургский государственный университет телекоммуникаций им. проф. М. А. Бонч-Бруевича.
+            Студент 3-го курса, направление: <b>11.05.04 специалитет — Оптические системы связи.</b>
+        </li>
+    </ul>
+
+    <h2>Опыт работы:</h2>
+    <p>ООО «СкайНэт» 08.2024 — настоящее время</p>
+
+    <ul>
+        <li>
+            08.2024 - 01.2025: Специалист технической поддержки — голосовой канал 2-я категория
+            <ul>
+                <li>Обработка входящих обращений от абонентов интернет-провайдера, связанные с работой услуг связи.</li>
+            </ul>
+        </li>
+
+        <li>
+            01.2025 — настоящее время: Специалист технической поддержки — текстовый канал.
+            <ul>
+                <li>Обработка более 80 обращений от абонентов интернет-провайдера ежедневно, более сложные кейсы, требующие технических знаний.</li>
+            </ul>
+        </li>
+    </ul>
+</div>
+
+<div class="contacts" id="contacts">
+    <h1 class="title">Contacts</h1>
+
+    <h2>Контактные данные:</h2>
+    <ul>
+        <li>Телефон: +7 (911) 346-30-40</li>
+        <li>Email: <a href="mailto:shempelevdima@gmail.com">shempelevdima@gmail.com</a></li>
+    </ul>
+</div>
+    </div>
+</body>
+</html>
