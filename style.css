@@ -256,6 +256,18 @@ label[for="showPassword"] {
     font-size: 14px;
     cursor: pointer;
 }
+
+.password-hint {
+    width: 100%;
+    padding: 0.5rem;
+    background: #eef8fb;
+    border: 1px solid var(--mainColor);
+    border-radius: 5px;
+    color: #075f7c;
+    font-size: 13px;
+    line-height: 1.4;
+}
+
 .camera {
     display: flex;
     flex-direction: column;

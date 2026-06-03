@@ -64,10 +64,22 @@
     });
 
     const brightness = document.getElementById('range_brightness');
-    brightness.addEventListener('change', () => {
-        video.style.filter = `brightness(${brightness.value / 100})`;
-        canvas.style.filter = `brightness(${brightness.value / 100})`;
-    });
+    const opacity = document.getElementById('range_opacity');
+    const contrast = document.getElementById('range_contrast');
+    const saturate = document.getElementById('range_saturate');
+
+    function applyCameraStyles() {
+        const filter = `brightness(${brightness.value / 100}) contrast(${contrast.value / 100}) saturate(${saturate.value / 100})`;
+        video.style.filter = filter;
+        canvas.style.filter = filter;
+        video.style.opacity = opacity.value / 100;
+        canvas.style.opacity = opacity.value / 100;
+    }
+
+    brightness.addEventListener('change', applyCameraStyles);
+    opacity.addEventListener('change', applyCameraStyles);
+    contrast.addEventListener('change', applyCameraStyles);
+    saturate.addEventListener('change', applyCameraStyles);
 }
 
 function clearphoto() {
