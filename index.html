@@ -5,6 +5,8 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
     <link rel="stylesheet" type="text/css" href="style.css">
+     <script src="./index.js" async></script>
+     <script src="capture.js" defer></script>
 </head>
 <body>
     <div class="wrapper">
@@ -103,16 +105,20 @@
             <div class="block forms">
     <h2>Формы</h2>
     <form action="">
-        <input type="text" name="text" placeholder="Любой текст">
-        <input type="number" placeholder="Только числа">
-        <input type="tel" name="phone" placeholder="Номер телефона">
-        <input type="email" name="email" placeholder="Почта">
-        <input type="password" name="password" placeholder="Пароль">
-        <input type="color" placeholder="Цвет">
-        <input type="range" placeholder="">
-        <input type="date" placeholder="">
-        <input type="datetime-local" placeholder="">
-        <input type="checkbox" placeholder="">
+        <input name="text" type="text" id="text" placeholder="Любой текст">
+        <input name="number" type="number" id="number" placeholder="Только числа">
+        <input name="phone" type="tel" id="phone" placeholder="Номер телефона">
+        <input name="email" type="email" id="email" placeholder="Почта">
+        <input name="password" type="password" id="password" placeholder="Пароль">
+
+        <input type="checkbox" id="showPassword" name="showPassword">
+        <label for="showPassword">Показать пароль</label>
+
+        <input name="color" type="color" id="color" placeholder="Цвет">
+        <input name="range" type="range" id="range" placeholder="">
+        <input name="date" type="date" id="date" placeholder="">
+        <input name="datetime" type="datetime-local" id="datetime" placeholder="">
+        <input name="checkbox" type="checkbox" id="checkbox" placeholder="">
 
         <div class="radioblock">
             <div class="answers">
@@ -127,7 +133,71 @@
         </div>
     </form>
 
-    <button type="submit">Отправить</button>
+    <button type="button" id="formSubmitBtn" disabled="true">Отправить</button>
+</div>
+
+<div class="block camera">
+    <h2>Camera</h2>
+
+     <input
+        type="range"
+        id="range_width"
+        min="100"
+        max="1000"
+        step="100"
+        value="320"
+    >
+    <label for="range_width">width</label>
+
+    <input
+        type="range"
+        id="range_brightness"
+        min="0"
+        max="200"
+        step="10"
+        value="100"
+    >
+    <label for="range_brightness">brightness</label>
+
+    <input
+        type="range"
+        id="range_opacity"
+        min="0"
+        max="100"
+        step="10"
+        value="100"
+    >
+    <label for="range_opacity">opacity</label>
+
+    <input
+        type="range"
+        id="range_contrast"
+        min="0"
+        max="200"
+        step="10"
+        value="100"
+    >
+    <label for="range_contrast">contrast</label>
+
+    <input
+        type="range"
+        id="range_saturate"
+        min="0"
+        max="200"
+        step="10"
+        value="100"
+    >
+    <label for="range_saturate">saturate</label>
+
+    <video id="video">Video stream not available.</video>
+
+    <button id="startbutton">Take photo</button>
+
+    <img id="photo" alt="photo">
+
+    <canvas id="canvas" class="output"></canvas>
+</div>
+
 </div>
 
         <div class="about" id="about">
